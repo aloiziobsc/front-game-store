@@ -19,6 +19,9 @@ function Home() {
         {produtos.map((produto, index) => <CardGame key={index} produto = { produto }/>)}
       </div>
       <CardCheckout />
+      <footer>
+        <p>Author: Aloízio Borges Santos Coelho</p>
+      </footer>
     </React.Fragment>
   );
 }

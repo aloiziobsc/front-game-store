@@ -1,8 +1,51 @@
-import { render, screen } from '@testing-library/react';
+import React from 'react';
+import { render, fireEvent } from '@testing-library/react';
 import App from '../App';
+// import CardGame from '../components/CardGame'
 
-test('renders learn react link', () => {
-  render(<App />);
-  const linkElement = screen.getByText(/learn react/i);
-  expect(linkElement).toBeInTheDocument();
+test('renders Game Shop', () => {
+  const { getAllByText } = render(<App />);
+  const tituloText = getAllByText(/Game Shop/i)[0];
+  expect(tituloText).toBeInTheDocument();
+});
+
+test('renders card game', () => {
+  const { getAllByTestId } = render(<App />);
+  // const { getByRole } = render(<CardGame />);
+  const selectItem = getAllByTestId('card-game')[0];
+  // const image = getByRole('img')
+  expect(selectItem).toBeInTheDocument();
+  // expect(image).toBeInTheDocument()
+});
+
+test('renders 9 cards game', () => {
+  const { getAllByTestId } = render(<App />);
+  const selectItem = getAllByTestId('card-game');
+  expect(selectItem.length).toEqual(9);
+});
+
+test('renders select order', () => {
+  const { getAllByTestId } = render(<App />);
+  const selectItem = getAllByTestId('select-option');
+  expect(selectItem.length).toEqual(1);
+});
+
+test('renders button minus disabled', () => {
+  const { getAllByRole } = render(<App />);
+  const buttonMinus = getAllByRole('button')[0];
+  expect(buttonMinus).toBeDisabled();
+});
+
+test('activate button -', () => {
+  const { getAllByRole } = render(<App />);
+  const button = getAllByRole('button')[1];
+  fireEvent.click(button)
+  const buttonMinus = getAllByRole('button')[0];
+  expect(buttonMinus).not.toBeDisabled();
+});
+
+test('renders checkout card', () => {
+  const { getByTestId } = render(<App />);
+  const selectItem = getByTestId('card-checkout');
+  expect(selectItem).toBeInTheDocument();
 });

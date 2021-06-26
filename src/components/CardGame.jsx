@@ -20,7 +20,7 @@ function CardGame(props) {
   }, [image, quantityGame]);
 
   return (
-    <div className="card-game">
+    <div className="card-game" data-testid="card-game">
       {/* <img alt="Movie Cover" className="movie-card-image" src={imagePath} /> */}
       <div>
         <h4 className="game-card-title">{name}</h4>

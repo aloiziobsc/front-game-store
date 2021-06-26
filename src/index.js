@@ -3,13 +3,10 @@ import ReactDOM from 'react-dom';
 import './css/index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-import GameShopContext from './provider/index'
 
 ReactDOM.render(
   <React.StrictMode>
-    <GameShopContext>
-      <App />
-    </GameShopContext>
+    <App />
   </React.StrictMode>,
   document.getElementById('root')
 );

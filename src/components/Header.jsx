@@ -5,7 +5,7 @@ function Header() {
     <div>
       <header className="header-container">
         <h1>
-          Game Shop
+          Game Shop 🎮
         </h1>
       </header>
     </div>
