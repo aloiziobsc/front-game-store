@@ -8,7 +8,7 @@ function SortCards() {
   return (
     <div className="filtro-cards">
       <span>Classificar por:</span>
-        <select onChange={({ target }) => sortArray(target.value, setProdutos)}>
+        <select data-testid="select-option" onChange={({ target }) => sortArray(target.value, setProdutos)}>
           <option value="01">preço</option>
           <option value="02">popularidade</option>
           <option value="03">ordem alfabética</option>
