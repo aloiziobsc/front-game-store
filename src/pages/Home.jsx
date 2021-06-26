@@ -1,7 +1,6 @@
 import React, { useContext, useEffect } from 'react';
 import Header from '../components/Header';
 import CardGame from '../components/CardGame';
-import SortCards from '../components/SortCards';
 import CardCheckout from '../components/CardCheckout';
 import GameShopContext from '../context/index';
 
@@ -13,8 +12,9 @@ function Home() {
 
   return (
     <React.Fragment>
-      <Header />
-      <SortCards/>
+      <div className="header-sortCards-container">
+        <Header />
+      </div>
       <div className="cards-game-container">
         {produtos.map((produto, index) => <CardGame key={index} produto = { produto }/>)}
       </div>

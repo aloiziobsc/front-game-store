@@ -36,6 +36,9 @@ const addProduct = (quantity,setQuantity, carrinho, setCarrinho) => {
 
 const calculaTotal = (carrinho) => {
   const quantGames = carrinho.length
+  if (quantGames === 0) {
+    return 0
+  }
   const totalPriceProducts = carrinho.reduce((acc, elem) => acc + elem.price, 0)
   return (quantGames * 10) + totalPriceProducts
 }

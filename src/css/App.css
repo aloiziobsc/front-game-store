@@ -1,22 +1,27 @@
 /* .App {
   background-image: linear-gradient(-135deg, #201db3, #2b0469, #201db3);
 } */
-
-.header-container {
-  align-items: center;
-  /* background-color: #343a40; */
+.header-sortCards-container {
   background-image: linear-gradient(45deg, #302c42, #2b0469, #302c42);
   color: aliceblue;
+  position: fixed;
+  width: 100vw;
   display: flex;
-  height: 60px;
+  flex-wrap: wrap;
   justify-content: center;
 }
 
+.order-cards {
+  flex-direction: row-reverse;
+  justify-content: flex-end;
+}
+
+
 .cards-game-container {
+  padding-top: 120px;
   display: flex;
   justify-content:center;
   flex-wrap: wrap;
-  height:auto;
 }
 
 .card-game {
@@ -30,6 +35,10 @@
   animation: animation-move 0.35s;
   animation-direction: normal;
 }
+
+/* .game-card-image {
+  margin-left: 12px;
+} */
 
 .card-checkout {
   border: 1px solid #BBD3FE;

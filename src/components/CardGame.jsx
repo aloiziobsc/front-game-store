@@ -4,7 +4,6 @@ import { reduceProduct, addProduct } from '../services/index';
 import GameShopContext from '../context/index';
 
 function CardGame(props) {
-  const [loadImage, setLoadImage] = useState('')
   const [quantityGame, SetQuantityGame] = useState(0)
   const { carrinho, setCarrinho } = useContext(GameShopContext)
   const { produto: { name, price, id, score, image } } = props
@@ -21,12 +20,12 @@ function CardGame(props) {
 
   return (
     <div className="card-game" data-testid="card-game">
-      {/* <img alt="Movie Cover" className="movie-card-image" src={imagePath} /> */}
+      {/* <img alt="Game Cover" className="game-card-image" src={ `/assets/${image}` } /> */}
       <div>
         <h4 className="game-card-title">{name}</h4>
         <h5 className="price">{`R$ ${price}`}</h5>
         <p className="product-id">{`ID: ${id}`}</p>
-        <img alt="Game Cover" className="movie-card-image" src={ image } />
+        <img alt="Game Cover" className="game-card-image" src={ `/assets/${image}` } />
       </div>
       <div className="score">
         <div>
