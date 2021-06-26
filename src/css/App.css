@@ -1,0 +1,108 @@
+/* .App {
+  background-image: linear-gradient(-135deg, #201db3, #2b0469, #201db3);
+} */
+
+.header-container {
+  align-items: center;
+  background-color: #343a40;
+  color: aliceblue;
+  display: flex;
+  height: 60px;
+  justify-content: center;
+}
+
+.cards-game-container {
+  display: flex;
+  justify-content:center;
+  flex-wrap: wrap;
+  height:auto;
+}
+
+.card-game {
+  border: 1px solid #BBD3FE;
+  padding: 10px;
+  border-radius: 20px;
+  box-shadow:  5px 5px 8px #385180, -1px -1px 1px #97AACC;
+  margin: 20px;
+  min-width: 330px;
+  max-width: 500px;
+  animation: animation-move 0.35s;
+  animation-direction: normal;
+}
+
+.card-checkout {
+  border: 1px solid #BBD3FE;
+  padding: 10px;
+  border-radius: 20px;
+  box-shadow:  5px 5px 8px #385180, -1px -1px 1px #97AACC;
+  margin: 40px;
+  animation: animation-move 0.35s;
+  animation-direction: normal;
+}
+
+@keyframes animation-move {
+  from {
+    opacity: 0;
+    transform: translateX(-35%);
+  } to {
+    opacity: 1;
+    transform: translateX(0%);
+  }
+}
+
+.filtro-cards {
+  display: flex;
+  justify-content: flex-end;
+  margin: 10px;
+  font-weight: 500;
+}
+
+.game-card-title {
+  font-size: 24px;
+  font-weight: 500;
+  margin: 0 0 12px;
+}
+
+.price {
+  color: #b4330c;
+  font-size: 16px;
+  font-weight: 500;
+  margin: 0 0 8px;
+}
+
+.product-id {
+  font-size: 12px;
+}
+
+.button-style {
+  border-radius: 10px;
+  margin: 0 12px;
+}
+
+.score {
+  background-color: rgba(0, 0, 0, 0.03);
+  border-top: 1px solid rgba(0, 0, 0, 0.125);
+  display: flex;
+  justify-content:space-between;
+  padding: 12px 20px;
+}
+
+/* .App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+} */

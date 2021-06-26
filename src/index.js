@@ -1,12 +1,15 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
+import './css/index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import GameShopContext from './provider/index'
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <GameShopContext>
+      <App />
+    </GameShopContext>
   </React.StrictMode>,
   document.getElementById('root')
 );
