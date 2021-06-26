@@ -26,7 +26,7 @@ function CardGame(props) {
         <h4 className="game-card-title">{name}</h4>
         <h5 className="price">{`R$ ${price}`}</h5>
         <p className="product-id">{`ID: ${id}`}</p>
-        {loadImage && <img alt="Game Cover" className="movie-card-image" src={ image } />}
+        <img alt="Game Cover" className="movie-card-image" src={ image } />
       </div>
       <div className="score">
         <div>

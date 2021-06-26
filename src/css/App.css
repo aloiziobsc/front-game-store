@@ -4,7 +4,8 @@
 
 .header-container {
   align-items: center;
-  background-color: #343a40;
+  /* background-color: #343a40; */
+  background-image: linear-gradient(45deg, #302c42, #2b0469, #302c42);
   color: aliceblue;
   display: flex;
   height: 60px;
@@ -25,7 +26,7 @@
   box-shadow:  5px 5px 8px #385180, -1px -1px 1px #97AACC;
   margin: 20px;
   min-width: 330px;
-  max-width: 500px;
+  max-width: 330px;
   animation: animation-move 0.35s;
   animation-direction: normal;
 }
