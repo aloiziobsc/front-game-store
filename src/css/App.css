@@ -1,6 +1,3 @@
-/* .App {
-  background-image: linear-gradient(-135deg, #201db3, #2b0469, #201db3);
-} */
 .header-sortCards-container {
   background-image: linear-gradient(45deg, #302c42, #2b0469, #302c42);
   color: aliceblue;
@@ -16,9 +13,13 @@
   justify-content: flex-end;
 }
 
+.option-sort{
+  background-color: aliceblue;
+  color:#2b0469;
+}
 
 .cards-game-container {
-  padding-top: 120px;
+  padding-top: 150px;
   display: flex;
   justify-content:center;
   flex-wrap: wrap;
@@ -36,11 +37,9 @@
   animation-direction: normal;
 }
 
-/* .game-card-image {
-  margin-left: 12px;
-} */
-
 .card-checkout {
+  display: flex;
+  justify-content: space-between;
   border: 1px solid #BBD3FE;
   padding: 10px;
   border-radius: 20px;
@@ -49,6 +48,14 @@
   animation: animation-move 0.35s;
   animation-direction: normal;
 }
+
+.card-checkout-button {
+  background-image: linear-gradient(45deg, #302c42, #2b0469, #302c42);
+  color: aliceblue;
+  box-shadow:  5px 5px 8px #385180, -1px -1px 1px #97AACC;
+  border-radius: 10px;
+}
+
 
 @keyframes animation-move {
   from {
@@ -61,7 +68,9 @@
 }
 
 .filtro-cards {
+  border-color: aliceblue;
   display: flex;
+  flex-direction: column;
   justify-content: flex-end;
   margin: 10px;
   font-weight: 500;
@@ -96,23 +105,3 @@
   justify-content:space-between;
   padding: 12px 20px;
 }
-
-/* .App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-} */

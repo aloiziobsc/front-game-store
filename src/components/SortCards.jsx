@@ -1,18 +1,25 @@
-import React, { useContext } from 'react';
-import { sortArray } from '../services/index'
-import GameShopContext from '../context/index';
+import React, { useState } from 'react';
+import { sortArray } from '../services/index';
 
-function SortCards() {
-  const { setProdutos } = useContext(GameShopContext)
+function SortCards(props) {
+  const { setProdutos } = props;
+  const [showSortOptions, setSortOptions] = useState(false);
 
   return (
     <div className="filtro-cards">
-      <span>Classificar por:</span>
-        <select data-testid="select-option" onChange={({ target }) => sortArray(target.value, setProdutos)}>
-          <option value="01">preço</option>
-          <option value="02">popularidade</option>
-          <option value="03">ordem alfabética</option>
-        </select>
+      <div onClick={ () => showSortOptions === false ? setSortOptions(true) : setSortOptions(false) }>
+        <span data-testid="select-option">Classificar por </span>
+        <img alt="Arrow down" className="" src={ `/assets/arrow-down-icon.svg` } />
+      </div>
+      <React.Fragment>
+        { showSortOptions && (
+          <div>
+            <div className="option-sort" onClick={() => sortArray("01", setProdutos)}>preço</div>
+            <div onClick={() => sortArray("02", setProdutos)}>popularidade</div>
+            <div className="option-sort" onClick={() => sortArray("03", setProdutos)}>ordem alfabética</div>
+          </div>
+        ) }
+      </React.Fragment>
     </div>
   );
 }

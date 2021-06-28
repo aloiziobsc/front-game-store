@@ -1,24 +1,31 @@
-import React, { useContext, useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import Header from '../components/Header';
 import CardGame from '../components/CardGame';
-import CardCheckout from '../components/CardCheckout';
-import GameShopContext from '../context/index';
+import TotalCard from '../components/TotalCard';
+import produtosJSON from '../produtos/products.json';
 
 function Home() {
-  const { produtos } = useContext(GameShopContext)
+  const [produtos, setProdutos] = useState(JSON.parse(localStorage.getItem('produtos')));
+  const [carrinho, setCarrinho] = useState(JSON.parse(localStorage.getItem('carrinho')));
 
   useEffect(() => {
-  }, [produtos]);
+    localStorage.clear()
+    localStorage.setItem('produtos', JSON.stringify(produtosJSON));
+    localStorage.setItem('carrinho', JSON.stringify([]));
+    setProdutos(produtos);
+  }, [produtos, setProdutos, carrinho, setCarrinho]);
 
   return (
     <React.Fragment>
       <div className="header-sortCards-container">
-        <Header />
+        <Header setProdutos={ setProdutos }/>
       </div>
       <div className="cards-game-container">
-        {produtos.map((produto, index) => <CardGame key={index} produto = { produto }/>)}
+        { produtos && produtos.map((produto, index) => <CardGame key={index} produto = { produto } 
+        carrinho = { carrinho } setCarrinho = { setCarrinho }
+        />)}
       </div>
-      <CardCheckout />
+      <TotalCard carrinho = { carrinho }/>
       <footer>
         <p>Author: Aloízio Borges Santos Coelho</p>
       </footer>

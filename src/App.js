@@ -4,19 +4,19 @@ import {
   Route,
 } from 'react-router-dom';
 import Home from './pages/Home';
-import Checkout from './pages/Checkout'
-import GameShopContext from './provider/index'
+import Checkout from './pages/Checkout';
+import produtosJSON from './produtos/products.json';
 
 function App() {
+  localStorage.setItem('produtos', JSON.stringify(produtosJSON));
+  localStorage.setItem('carrinho', JSON.stringify([]));
   return (
-    <GameShopContext>
-      <BrowserRouter>
-        <div className="App">
-          <Route exact path="/"><Home/></Route>
-          <Route exact path="/checkout"><Checkout/></Route>
-        </div>
-      </BrowserRouter>
-    </GameShopContext>
+    <BrowserRouter>
+      <div className="App">
+        <Route exact path="/"><Home/></Route>
+        <Route exact path="/checkout"><Checkout/></Route>
+      </div>
+    </BrowserRouter>
   );
 }
 

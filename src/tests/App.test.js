@@ -1,7 +1,6 @@
 import React from 'react';
 import { render, fireEvent } from '@testing-library/react';
 import App from '../App';
-// import CardGame from '../components/CardGame'
 
 test('renders Game Shop', () => {
   const { getAllByText } = render(<App />);
@@ -10,12 +9,11 @@ test('renders Game Shop', () => {
 });
 
 test('renders card game', () => {
-  const { getAllByTestId } = render(<App />);
-  // const { getByRole } = render(<CardGame />);
+  const { getAllByTestId, getAllByRole } = render(<App />);
   const selectItem = getAllByTestId('card-game')[0];
-  // const image = getByRole('img')
+  const image = getAllByRole('img');
   expect(selectItem).toBeInTheDocument();
-  // expect(image).toBeInTheDocument()
+  expect(image.length).toBeGreaterThan(5);
 });
 
 test('renders 9 cards game', () => {

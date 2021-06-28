@@ -1,7 +1,9 @@
 import React from 'react';
 import SortCards from './SortCards';
 
-function Header() {
+function Header(props) {
+  const { setProdutos } = props;
+  
   return (
     <div>
       <header>
@@ -9,7 +11,7 @@ function Header() {
           Game Shop 🎮
         </h1>
         <div  className="order-cards">
-          <SortCards/>
+          <SortCards setProdutos = { setProdutos }/>
         </div>
       </header>
     </div>
