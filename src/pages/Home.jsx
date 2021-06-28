@@ -13,7 +13,7 @@ function Home() {
     localStorage.setItem('produtos', JSON.stringify(produtosJSON));
     localStorage.setItem('carrinho', JSON.stringify([]));
     setProdutos(produtos);
-  }, [produtos, setProdutos, carrinho, setCarrinho]);
+  }, [produtos, setProdutos, setCarrinho]);
 
   return (
     <React.Fragment>

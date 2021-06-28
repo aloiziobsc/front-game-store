@@ -55,7 +55,9 @@ const calculaTotal = (carrinho) => {
   return (quantGames * 10) + totalPriceProducts
 }
 
-const freteGratis = (price, quantProdutos) => {
+const freteGratis = (price) => {
+  const arrCarrinho = JSON.parse(localStorage.getItem('carrinho'));
+  const quantProdutos = arrCarrinho.length
   const transportCost = quantProdutos * 10
   const onlyProductsCost = price - transportCost
   if (onlyProductsCost > 250) {
