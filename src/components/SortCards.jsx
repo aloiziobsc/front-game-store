@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { sortArray } from '../services/index';
+import PropTypes from 'prop-types';
 
 function SortCards(props) {
   const { setProdutos } = props;
@@ -29,5 +30,9 @@ function SortCards(props) {
     </div>
   );
 }
+
+SortCards.propTypes = {
+  setProdutos: PropTypes.func.isRequired,
+};
 
 export default SortCards;

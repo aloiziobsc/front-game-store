@@ -1,5 +1,6 @@
 import React from 'react';
 import SortCards from './SortCards';
+import PropTypes from 'prop-types';
 
 function Header(props) {
   const { setProdutos } = props;
@@ -17,5 +18,9 @@ function Header(props) {
     </div>
   );
 }
+
+Header.propTypes = {
+  setProdutos: PropTypes.func.isRequired,
+};
 
 export default Header;

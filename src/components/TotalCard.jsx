@@ -1,6 +1,7 @@
 import React from 'react';
 import { useHistory } from 'react-router-dom';
 import { calculaTotal, freteGratis, formatPrice } from '../services/index';
+import PropTypes from 'prop-types';
 
 function TotalCard(props) {
   const { carrinho } = props;
@@ -14,5 +15,9 @@ function TotalCard(props) {
     </div>
   );
 }
+
+TotalCard.propTypes = {
+  carrinho: PropTypes.array.isRequired,
+};
 
 export default TotalCard;

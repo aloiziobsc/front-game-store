@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import PropTypes from 'prop-types';
-import { reduceProduct, addProduct, countQuantityGame } from '../services/index';
+import { reduceProduct, addProduct, countQuantityGame, formatPrice } from '../services/index';
 
 function CardGame(props) {
   const { carrinho, setCarrinho } = props;
@@ -15,7 +15,7 @@ function CardGame(props) {
     <div className="card-game" data-testid="card-game">
       <div>
         <h4 className="game-card-title">{name}</h4>
-        <h5 className="price">{`R$ ${price}`}</h5>
+        <h5 className="price">{`R$ ${formatPrice(price)}`}</h5>
         <p className="product-id">{`ID: ${id}`}</p>
         <img alt="Game Cover" src={ `/assets/${image}` } />
       </div>
@@ -37,6 +37,8 @@ function CardGame(props) {
 
 CardGame.propTypes = {
   produto: PropTypes.object.isRequired,
+  carrinho: PropTypes.array.isRequired,
+  setCarrinho: PropTypes.func.isRequired,
 };
 
 export default CardGame;
