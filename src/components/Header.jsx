@@ -7,7 +7,7 @@ function Header(props) {
   return (
     <div>
       <header>
-        <h1>
+        <h1 className="titulo-header">
           Game Shop 🎮
         </h1>
         <div  className="order-cards">

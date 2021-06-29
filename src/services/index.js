@@ -69,6 +69,19 @@ const formatPrice = (valor) => {
   return ((valor * 10) / 10).toFixed(2).toString().replace('.', ',')
 }
 
+const countQuantityGame = (produto) => {
+  let count = 0
+  const arrCarrinho = JSON.parse(localStorage.getItem('carrrinho'))
+  if (!arrCarrinho) {
+    return 0
+  }
+  for(let index = 0; index < arrCarrinho.lenght; index += 1) {
+    if (arrCarrinho[index] === produto) {
+      count = count + 1
+    }
+  }
+  return count
+}
 
 export {
   sortArray,
@@ -77,4 +90,5 @@ export {
   freteGratis,
   calculaTotal,
   formatPrice,
+  countQuantityGame,
 }

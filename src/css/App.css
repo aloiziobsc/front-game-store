@@ -8,18 +8,49 @@
   justify-content: center;
 }
 
+.titulo-header:hover {
+  transition: 1s;
+  -webkit-transform: scale(1.1);
+  -ms-transform: scale(1.1);
+  transform: scale(1.1);
+}
+
 .order-cards {
   flex-direction: row-reverse;
   justify-content: flex-end;
 }
 
+.option-sort-header {
+  background-color: aliceblue;
+  color:#2b0469;
+  border-radius: 10px;
+}
+
 .option-sort{
   background-color: aliceblue;
   color:#2b0469;
+  border-radius: 10px;
+}
+
+.option-sort:hover{
+  background-color: #2b0469;
+  color:aliceblue;
+  border-radius: 10px;
+}
+
+.buttons-option-sort {
+  display: flex;
+  flex-direction: column;
 }
 
 .cards-game-container {
   padding-top: 150px;
+  display: flex;
+  justify-content:center;
+  flex-wrap: wrap;
+}
+
+.checkout-page {
   display: flex;
   justify-content:center;
   flex-wrap: wrap;
@@ -51,6 +82,13 @@
 
 .card-checkout-button {
   background-image: linear-gradient(45deg, #302c42, #2b0469, #302c42);
+  color: aliceblue;
+  box-shadow:  5px 5px 8px #385180, -1px -1px 1px #97AACC;
+  border-radius: 10px;
+}
+
+.card-checkout-button:hover {
+  background-image: linear-gradient(-45deg, #302c42, #2b0469, #302c42);
   color: aliceblue;
   box-shadow:  5px 5px 8px #385180, -1px -1px 1px #97AACC;
   border-radius: 10px;

@@ -30,7 +30,7 @@ test('renders select order', () => {
 
 test('renders button minus disabled', () => {
   const { getAllByRole } = render(<App />);
-  const buttonMinus = getAllByRole('button')[0];
+  const buttonMinus = getAllByRole('button')[1];
   expect(buttonMinus).toBeDisabled();
 });
 

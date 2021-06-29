@@ -12,7 +12,7 @@ function Home() {
     localStorage.clear()
     localStorage.setItem('produtos', JSON.stringify(produtosJSON));
     localStorage.setItem('carrinho', JSON.stringify([]));
-    setProdutos(produtos);
+    // setProdutos(produtos);
   }, [produtos, setProdutos, setCarrinho]);
 
   return (

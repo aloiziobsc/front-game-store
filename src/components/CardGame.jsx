@@ -1,12 +1,12 @@
 import React, { useState, useEffect } from 'react';
 import PropTypes from 'prop-types';
-import { reduceProduct, addProduct } from '../services/index';
+import { reduceProduct, addProduct, countQuantityGame } from '../services/index';
 
 function CardGame(props) {
-  const [quantityGame, SetQuantityGame] = useState(0);
   const { carrinho, setCarrinho } = props;
+  const { produto } = props
   const { produto: { name, price, id, score, image } } = props;
-  
+  const [quantityGame, SetQuantityGame] = useState(countQuantityGame(produto));
 
   useEffect(() => {
   }, [image, quantityGame]);
@@ -25,7 +25,7 @@ function CardGame(props) {
             -
           </button>
             <span>{ quantityGame }</span>
-          <button className="button-style" onClick={() => addProduct(quantityGame, SetQuantityGame, props.produto, setCarrinho)}>
+          <button className="button-style" onClick={() => addProduct(quantityGame, SetQuantityGame, produto, setCarrinho)}>
             +
           </button>
         </div>

@@ -7,16 +7,22 @@ function SortCards(props) {
 
   return (
     <div className="filtro-cards">
-      <div onClick={ () => showSortOptions === false ? setSortOptions(true) : setSortOptions(false) }>
-        <span data-testid="select-option">Classificar por </span>
+      <button className="option-sort-header" onClick={ () => showSortOptions === false ? setSortOptions(true) : setSortOptions(false) }>
+        <span data-testid="select-option"><b>Classificar por </b></span>
         <img alt="Arrow down" className="" src={ `/assets/arrow-down-icon.svg` } />
-      </div>
+      </button>
       <React.Fragment>
         { showSortOptions && (
-          <div>
-            <div className="option-sort" onClick={() => sortArray("01", setProdutos)}>preço</div>
-            <div onClick={() => sortArray("02", setProdutos)}>popularidade</div>
-            <div className="option-sort" onClick={() => sortArray("03", setProdutos)}>ordem alfabética</div>
+          <div className="buttons-option-sort">
+            <button className="option-sort" onClick={() => sortArray("01", setProdutos)}>
+              <b>Preço</b>
+            </button>
+            <button className="option-sort" onClick={() => sortArray("02", setProdutos)}>
+              <b>Popularidade</b>
+            </button>
+            <button className="option-sort" onClick={() => sortArray("03", setProdutos)}>
+              <b>Ordem alfabética</b>
+            </button>
           </div>
         ) }
       </React.Fragment>
