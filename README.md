@@ -2,6 +2,8 @@
 
 O projeto consiste em criar uma página de e-commerce de video games
 
+![image-gameshop](https://www.abbeycentreshopping.co.uk/wp-content/uploads/2017/02/150417BT2-55-720x720.jpg)
+
 ## Scripts disponíveis:
 
 ### `npm start`
